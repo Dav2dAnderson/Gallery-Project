@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for photo in photos %}
+<div class="card mb-4">
+    <a href="#!"><img class="card-img-top" src="{{ photo.image.url }}" alt="..." /></a>
+    <div class="card-body">
+        <div class="small text-muted">{{ photo.created_at }}</div>
+        <h2 class="card-title">{{ photo.title }}</h2>
+        <p class="card-text">{{ photo.author }}</p>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

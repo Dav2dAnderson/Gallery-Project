@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mb-4">
+    <a href="#!"><img class="card-img-top" src="{{ photo_detail.image.url }}" alt="..." /></a>
+    <div class="card-body">
+        <div class="small text-muted">{{ photo_detail.created_at }} views: {{ photo_detail.views }}</div>
+        <h2 class="card-title">{{ photo_detail.title }}</h2>
+        <p class="card-text">{{ photo_detail.author }}</p>
+        <a class="btn btn-primary" href="#!">Read more →</a>
+    </div>
+</div>
+{% endblock %}
